@@ -1,0 +1,18 @@
+{
+    "name": "nakato/rotheart",
+    "description": "Enrutar básico",
+    "license": "MIT",
+    "keywords": ["router", "rutas", "route", "api"],
+    "authors": [
+        {
+            "name": "Nakato"
+        }
+    ],
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Rotheart\\": "src/HTTP/"
+        }
+    }
+}
