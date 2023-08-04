@@ -8,12 +8,8 @@ class Response {
     public function __construct() {
         $this->loader = new \Twig\Loader\FilesystemLoader('./static');
         $this->twig = new \Twig\Environment($this->loader, []);
-
+    
         $function = new \Twig\TwigFunction('csrf_token', function () {return CSRF::csrf_token();});
-        $function2 = new \Twig\TwigFunction('getUserPath', function (string $path, string $username){
-            $i = strpos($username, $path);
-            return substr($path, $i + strlen($username));
-        });
         $this->twig->addFunction($function);
         $this->twig->addFunction($function2);
     }
